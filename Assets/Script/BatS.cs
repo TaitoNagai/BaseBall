@@ -2,22 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BallH : MonoBehaviour
+public class BatS : MonoBehaviour
 {
-    [SerializeField] GameObject ballPos;
-    [SerializeField] GameObject ball;
+    Animator m_anim;
     // Start is called before the first frame update
     void Start()
     {
-        
+        m_anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Return))
+        if(Input.GetButtonDown("Jump"))
         {
-            Instantiate(ball, ballPos.transform.position, Quaternion.identity);
+            m_anim.Play("Swing");
         }
     }
 }

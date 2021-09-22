@@ -10,9 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6647114060472801801}
   - component: {fileID: 6647114060472801802}
-  - component: {fileID: 6647114060472801803}
   - component: {fileID: 6647114060472801800}
-  - component: {fileID: 9197669581258775391}
   - component: {fileID: 8026244401345754015}
   - component: {fileID: -4987090533370072469}
   - component: {fileID: 5488532732701141004}
@@ -87,25 +85,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &6647114060472801803
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6647114060472801804}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 68a8565ec77d406468ae79ccfb8d4179, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!114 &6647114060472801800
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121,7 +100,7 @@ MonoBehaviour:
   ballKind:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6647114060472801803}
+      - m_Target: {fileID: 0}
         m_MethodName: Play
         m_Mode: 5
         m_Arguments:
@@ -135,7 +114,7 @@ MonoBehaviour:
   ballKindSlow:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6647114060472801803}
+      - m_Target: {fileID: 0}
         m_MethodName: Play
         m_Mode: 5
         m_Arguments:
@@ -149,7 +128,7 @@ MonoBehaviour:
   ballKindDown:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6647114060472801803}
+      - m_Target: {fileID: 0}
         m_MethodName: Play
         m_Mode: 5
         m_Arguments:
@@ -160,18 +139,6 @@ MonoBehaviour:
           m_StringArgument: BallKindDown
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &9197669581258775391
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6647114060472801804}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4ff68e26d745e2a40a2d8a46e81d5a3b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!58 &8026244401345754015
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -182,7 +149,7 @@ CircleCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
