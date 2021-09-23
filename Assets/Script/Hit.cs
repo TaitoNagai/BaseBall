@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class Hit : MonoBehaviour
 {
-    [SerializeField] GameObject m_ballPrefab;
+    [SerializeField] GameObject m_HomeRun;
     [SerializeField] Transform m_muzzle;
     Animator m_anim;
+    BallKinds bk;
     // Start is called before the first frame update
 
     void Start()
     {
-        
+        //bk = m_HomeRun.GetComponent<BallKinds>();
+        //m_kindAnim = m_HomeRun.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -21,15 +23,12 @@ public class Hit : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
-    {
-        BallKinds bk = m_ballPrefab.GetComponent<BallKinds>();
-        bk.m_kindAnim = m_ballPrefab.GetComponent<Animator>();
+    {   
         if (collision.gameObject.tag == "End")
         {
-        Destroy(collision.gameObject);
-            Debug.Log("Destroy");
-            GameObject go = Instantiate(m_ballPrefab, m_muzzle.transform.position, m_ballPrefab.transform.rotation);
-            bk.m_kindAnim.Play("HomeRun");
+            Destroy(collision.gameObject);
+            GameObject go = Instantiate(m_HomeRun, m_muzzle.transform.position, Quaternion.identity);
+            //bk.m_kindAnim.Play("HomeRun");
         }
     }
 }

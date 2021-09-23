@@ -20,17 +20,17 @@ public class BallKinds : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            m_kindAnim.Play("BallKinds");
-        }
-        else if (Input.GetKeyDown(KeyCode.RightArrow))
-        {
-            m_kindAnim.Play("BallKindSlow");
-        }
-        else if (Input.GetKeyDown(KeyCode.DownArrow))
-        {
-            m_kindAnim.Play("BallKindDown");
-        }
+            if (Input.GetKeyDown(KeyCode.LeftArrow))
+            {
+                m_kindAnim.Play("BallKinds");
+            }
+            else if (Input.GetKeyDown(KeyCode.RightArrow))
+            {
+                m_kindAnim.Play("BallKindSlow");
+            }
+            else if (Input.GetKeyDown(KeyCode.DownArrow))
+            {
+                m_kindAnim.Play("BallKindDown");
+            }
     }
 }

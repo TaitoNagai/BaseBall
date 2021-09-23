@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class BatS : MonoBehaviour
 {
+    float m_BatTimer = 5f;
+    float count = 5f;
     Animator m_anim;
     // Start is called before the first frame update
     void Start()
@@ -14,9 +17,14 @@ public class BatS : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetButtonDown("Jump"))
+        count += Time.deltaTime;
+        if(m_BatTimer < count)
         {
-            m_anim.Play("Swing");
-        }
+            if (Input.GetButtonDown("Jump"))
+            {
+                m_anim.Play("Swing");
+                count = 0f;
+            }
+        } 
     }
 }

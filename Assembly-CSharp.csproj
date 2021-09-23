@@ -68,6 +68,7 @@
     <Compile Include="Assets\Script\BallH.cs" />
     <Compile Include="Assets\Script\BallKinds.cs" />
     <Compile Include="Assets\Script\BatS.cs" />
+    <Compile Include="Assets\Script\DestroySelf.cs" />
     <Compile Include="Assets\Script\Hit.cs" />
     <Compile Include="Assets\Script\SceneLoader.cs" />
     <Reference Include="UnityEngine">

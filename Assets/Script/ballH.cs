@@ -6,6 +6,8 @@ public class BallH : MonoBehaviour
 {
     [SerializeField] GameObject ballPos;
     [SerializeField] GameObject ball;
+    float m_PitchTimer = 5f;
+    float count = 5f;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,9 +17,14 @@ public class BallH : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Return))
+        count += Time.deltaTime;
+        if (m_PitchTimer < count)
         {
-            Instantiate(ball, ballPos.transform.position, Quaternion.identity);
+            if (Input.GetKeyDown(KeyCode.Return))
+            {
+                Instantiate(ball, ballPos.transform.position, Quaternion.identity);
+                count = 0f;
+            }
         }
     }
 }
