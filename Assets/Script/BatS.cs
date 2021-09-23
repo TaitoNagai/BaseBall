@@ -5,8 +5,8 @@ using UnityEngine.Events;
 
 public class BatS : MonoBehaviour
 {
-    float m_BatTimer = 5f;
-    float count = 5f;
+    float m_BatTimer = 4f;
+    float count = 4f;
     Animator m_anim;
     // Start is called before the first frame update
     void Start()
