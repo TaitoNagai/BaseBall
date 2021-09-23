@@ -9,7 +9,14 @@ public class BallDestroy : MonoBehaviour
     {
         if (collision.gameObject.tag == "End")
         {
-            Destroy(this.gameObject);
+            Destroy(collision.gameObject);
+        }
+    }
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "End")
+        {
+            Destroy(collision.gameObject);
         }
     }
 }

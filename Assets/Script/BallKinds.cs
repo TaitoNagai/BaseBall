@@ -9,11 +9,12 @@ public class BallKinds : MonoBehaviour
     [SerializeField] UnityEvent ballKind;
     [SerializeField] UnityEvent ballKindSlow;
     [SerializeField] UnityEvent ballKindDown;
+    public Animator m_kindAnim;
 
-    
+
     void Start()
     {
-        
+        m_kindAnim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -21,15 +22,15 @@ public class BallKinds : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            ballKind.Invoke();
+            m_kindAnim.Play("BallKinds");
         }
         else if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            ballKindSlow.Invoke();
+            m_kindAnim.Play("BallKindSlow");
         }
         else if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            ballKindDown.Invoke();
+            m_kindAnim.Play("BallKindDown");
         }
     }
 }
