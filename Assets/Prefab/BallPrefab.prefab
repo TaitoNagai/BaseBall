@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -8929140610215042019}
   m_Layer: 0
   m_Name: BallPrefab
-  m_TagString: End
+  m_TagString: Strike
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
